@@ -692,6 +692,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
+# Verity
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.apk_verity.mode=2
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
