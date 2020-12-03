@@ -171,6 +171,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0 \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Dalvik
 PRODUCT_VENDOR_PROPERTIES += \
            vendor.vidc.disable.split.mode=1
