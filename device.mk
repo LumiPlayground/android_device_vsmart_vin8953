@@ -212,6 +212,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0 \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
 
 # Dalvik
 PRODUCT_VENDOR_PROPERTIES += \
