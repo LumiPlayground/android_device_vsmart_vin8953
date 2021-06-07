@@ -88,7 +88,6 @@ BOARD_USES_SRS_TRUEMEDIA := false
 DOLBY_ENABLE := false
 DTS_CODEC_M_ := false
 MM_AUDIO_ENABLED_SAFX := true
-USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bluetooth
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
