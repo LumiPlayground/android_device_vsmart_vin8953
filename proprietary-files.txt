@@ -208,7 +208,6 @@ system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar
 system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar
 system_ext/framework/vendor.qti.latency-V2.0-java.jar
 system_ext/framework/vendor.qti.latency-V2.1-java.jar
-system_ext/framework/vendor.qti.voiceprint-V1.0-java.jar
 
 # lib
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
@@ -360,7 +359,6 @@ system_ext/lib/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib/vendor.qti.latency@2.0.so
 system_ext/lib/vendor.qti.latency@2.1.so
-system_ext/lib/vendor.qti.voiceprint@1.0.so
 
 # lib64
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
@@ -518,7 +516,6 @@ system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.latency@2.0.so
 system_ext/lib64/vendor.qti.latency@2.1.so
-system_ext/lib64/vendor.qti.voiceprint@1.0.so
 
 # priv-app
 -system_ext/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk
@@ -1492,7 +1489,6 @@ vendor/lib/vendor.qti.latency@2.1.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib/vendor.qti.power.pasrmanager@1.0.so
-vendor/lib/vendor.qti.voiceprint@1.0.so
 
 # lib64
 vendor/lib64/btaudio_offload_if.so
@@ -1878,7 +1874,6 @@ vendor/lib64/vendor.qti.latency@2.1.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
-vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # radio
 vendor/radio/qcril_database/qcril.db
