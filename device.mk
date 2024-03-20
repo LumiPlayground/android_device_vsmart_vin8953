@@ -17,10 +17,6 @@
 # Vendor blobs
 $(call inherit-product, vendor/fairphone/FP3/FP3-vendor.mk)
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
-
 # System properties
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
