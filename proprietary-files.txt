@@ -119,7 +119,6 @@ system_ext/framework/dpmapi.jar
 system_ext/framework/embmslibrary.jar
 system_ext/framework/qcrilhook.jar
 system_ext/framework/qmapbridge.jar
-system_ext/framework/qti-telephony-common.jar
 system_ext/framework/remotesimlockmanagerlibrary.jar
 system_ext/framework/uimgbalibrary.jar
 system_ext/framework/uimgbamanagerlibrary.jar
