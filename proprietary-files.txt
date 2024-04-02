@@ -846,13 +846,6 @@ vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
 vendor/firmware/tas2557_uCDSP.bin
 vendor/firmware/tas2557evm_aacspk_a.ftcfg
-vendor/firmware/venus.b00
-vendor/firmware/venus.b01
-vendor/firmware/venus.b02
-vendor/firmware/venus.b03
-vendor/firmware/venus.b04
-vendor/firmware/venus.mbn
-vendor/firmware/venus.mdt
 vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # lib
