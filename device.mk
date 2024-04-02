@@ -109,7 +109,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     AntHalService \
-    android.hardware.bluetooth.audio@2.0-impl:32 \
+    android.hardware.bluetooth.audio-impl \
     android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth@1.0.vendor \
     audio.bluetooth.default \
