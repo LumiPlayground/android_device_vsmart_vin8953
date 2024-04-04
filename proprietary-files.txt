@@ -1,5 +1,14 @@
 # All unpinned blobs are extracted from FP3-REL-6.A.023.1-gms-497e9bef-user
 
+# GPU Firmware - from V430A_OPN_U_B15_211112
+vendor/firmware/a506_zap.b00
+vendor/firmware/a506_zap.b01
+vendor/firmware/a506_zap.b02
+vendor/firmware/a506_zap.elf
+vendor/firmware/a506_zap.mdt
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
+
 # System partition
 
 # bin
@@ -774,14 +783,7 @@ vendor/etc/wifi/aoa_cldb_swl14.bin
 vendor/etc/xtra_root_cert.pem
 
 # firmware
-vendor/firmware/a506_zap.b00
-vendor/firmware/a506_zap.b01
-vendor/firmware/a506_zap.b02
-vendor/firmware/a506_zap.elf
-vendor/firmware/a506_zap.mdt
 vendor/firmware/a530_gpmu.fw2
-vendor/firmware/a530_pfp.fw
-vendor/firmware/a530_pm4.fw
 vendor/firmware/a530v1_pfp.fw
 vendor/firmware/a530v1_pm4.fw
 vendor/firmware/a530v2_seq.fw2
