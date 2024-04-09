@@ -46,6 +46,9 @@
     <!-- Enable WPA2 to WPA3 auto-upgrade -->
     <bool translatable="false" name="config_wifiSaeUpgradeEnabled">false</bool>
 
+    <!-- Indicate the driver support NL80211_REG_CHANGED event. -->
+    <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+
     <!-- Indicate whether the verbose logging is always on -->
     <!-- 0: verbose logging controlled by user
          1: verbose logging on by default for userdebug
