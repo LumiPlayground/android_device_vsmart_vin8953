@@ -65,6 +65,17 @@ function blob_fixup() {
         sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
         ;;
 
+    # Remove libhwbinder/libhidltransport dependency
+    vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so)
+        "${PATCHELF}" --remove-needed "libhwbinder.so" "${2}"
+        "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
+        ;;
+
+    vendor/lib64/libfp_ext_svc2.so)
+        "${PATCHELF}" --remove-needed "libhwbinder.so" "${2}"
+        "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
+        ;;
+
     vendor/lib/libremosaic_daemon.so)
         [ "$2" = "" ] && return 0
         "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v30.so" "${2}"
