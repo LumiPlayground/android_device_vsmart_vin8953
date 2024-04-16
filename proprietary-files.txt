@@ -42,7 +42,6 @@ product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
 
 # app
 -system_ext/app/ConferenceDialer/ConferenceDialer.apk
--system_ext/app/DeviceInfo/DeviceInfo.apk
 -system_ext/app/DynamicDDSService/DynamicDDSService.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 -system_ext/app/SimContact/SimContact.apk
