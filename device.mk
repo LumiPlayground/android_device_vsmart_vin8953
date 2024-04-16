@@ -240,8 +240,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1 \
-    android.hardware.biometrics.fingerprint@2.1-service
+    android.hardware.biometrics.fingerprint@2.1
 
 # Framework Detect
 PRODUCT_PACKAGES += \
@@ -309,10 +308,10 @@ PRODUCT_PACKAGES += \
 
 #INIT
 PRODUCT_PACKAGES += \
-    elan_device.rc \
     fstab.qcom \
     init.class_late.sh \
     init.class_main.sh \
+    init.fpsensor.rc \
     init.mdm.sh \
     init.msm.usb.configfs.rc \
     init.qcom.class_core.sh \

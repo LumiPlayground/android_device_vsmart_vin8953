@@ -1,5 +1,12 @@
 # All unpinned blobs are extracted from FP3-REL-6.A.023.1-gms-497e9bef-user
 
+# Fingerprint - from V430A_OPN_U_B15_211112
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
+vendor/lib64/hw/fpsensor_fingerprint.default.so
+vendor/lib64/libfp_ext_svc2.so
+vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so
+
 # GPU Firmware - from V430A_OPN_U_B15_211112
 vendor/firmware/a506_zap.b00
 vendor/firmware/a506_zap.b01
@@ -8,6 +15,17 @@ vendor/firmware/a506_zap.elf
 vendor/firmware/a506_zap.mdt
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
+
+# QSEECOM firmware - from V430A_OPN_U_B15_211112
+vendor/firmware/fngap64.b00
+vendor/firmware/fngap64.b01
+vendor/firmware/fngap64.b02
+vendor/firmware/fngap64.b03
+vendor/firmware/fngap64.b04
+vendor/firmware/fngap64.b05
+vendor/firmware/fngap64.b06
+vendor/firmware/fngap64.mdt
+
 
 # System partition
 
@@ -803,14 +821,6 @@ vendor/firmware/cpp_firmware_v1_5_1.fw
 vendor/firmware/cpp_firmware_v1_5_2.fw
 vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
-vendor/firmware/fingerprint.b00
-vendor/firmware/fingerprint.b01
-vendor/firmware/fingerprint.b02
-vendor/firmware/fingerprint.b03
-vendor/firmware/fingerprint.b04
-vendor/firmware/fingerprint.b05
-vendor/firmware/fingerprint.b06
-vendor/firmware/fingerprint.mdt
 vendor/firmware/tas2557_uCDSP.bin
 vendor/firmware/tas2557evm_aacspk_a.ftcfg
 vendor/firmware/venus.b00
@@ -1513,7 +1523,6 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.FP3.so
 vendor/lib64/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/keystore.msm8953.so
 vendor/lib64/hw/sound_trigger.primary.msm8953.so
