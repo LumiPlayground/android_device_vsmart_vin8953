@@ -31,11 +31,9 @@ vendor/firmware/fngap64.mdt
 
 # bin
 bin/ppd
-bin/sigma_miracasthalservice
 
 # etc
 etc/firmware/ice40.bin
-etc/init/com.qualcomm.qti.sigma_miracast@1.0-service.rc
 etc/powerhint.xml
 
 # framework
@@ -47,29 +45,19 @@ etc/powerhint.xml
 
 # lib
 lib/hw/vendor.qti.hardware.qccsyshal@1.0-impl.so
-lib/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so
-lib/libmiracastsystem.so
 lib/libmmcamera_faceproc.so
 lib/libmmcamera_faceproc2.so
 lib/libsdm-disp-apis.so
 lib/libseemore.so
-lib/libsigmautils.so
 lib/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
-lib/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so
-lib/vendor.qti.hardware.sigma_miracast@1.0.so
 
 # lib64
 lib64/hw/vendor.qti.hardware.qccsyshal@1.0-impl.so
-lib64/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so
-lib64/libmiracastsystem.so
 lib64/libmmcamera_faceproc.so
 lib64/libmmcamera_faceproc2.so
 lib64/libsdm-disp-apis.so
 lib64/libseemore.so
-lib64/libsigmautils.so
 lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
-lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so
-lib64/vendor.qti.hardware.sigma_miracast@1.0.so
 
 
 # Product partition
@@ -1131,7 +1119,6 @@ vendor/lib/liblqe.so
 -vendor/lib/libmdmdetect.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libminkdescriptor.so
-vendor/lib/libmiracast.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmm-hdcpmgr.so
 vendor/lib/libmm-qcamera.so
@@ -1421,7 +1408,6 @@ vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0.so
 vendor/lib/vendor.qti.hardware.scve.panorama@1.0.so
-vendor/lib/vendor.qti.hardware.sigma_miracast@1.0.so
 vendor/lib/vendor.qti.hardware.slmadapter@1.0.so
 vendor/lib/vendor.qti.hardware.soter@1.0.so
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
@@ -1602,7 +1588,6 @@ vendor/lib64/liblqe.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket.so
-vendor/lib64/libmiracast.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libmmcamera2_frame_algorithm.so
@@ -1802,7 +1787,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
 vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
-vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
