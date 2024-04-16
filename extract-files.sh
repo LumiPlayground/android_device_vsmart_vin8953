@@ -59,6 +59,16 @@ fi
 function blob_fixup() {
     case "${1}" in
 
+    # Remove libhwbinder/libhidltransport dependency
+    vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so)
+        "${PATCHELF}" --remove-needed "libhwbinder.so" "${2}"
+        "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
+        ;;
+
+    vendor/lib64/libfp_ext_svc2.so)
+        "${PATCHELF}" --remove-needed "libhwbinder.so" "${2}"
+        "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
+        ;;
             return 1
             ;;
     esac
