@@ -578,6 +578,7 @@ TARGET_NOT_SUPPORT_VULKAN_FEATURE_LEVEL_1 := true
 
 # Wifi
 PRODUCT_PACKAGES += \
+    android.media.audio.common.types-V2-cpp \
     android.hardware.wifi.hostapd@1.0.vendor \
     android.hardware.wifi-service \
     hostapd \
