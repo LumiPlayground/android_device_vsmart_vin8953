@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_vin8953.mk
+    $(LOCAL_DIR)/aosp_vin8953.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_vin8953-user \
-    lineage_vin8953-userdebug \
-    lineage_vin8953-eng
+    aosp_vin8953-user \
+    aosp_vin8953-userdebug \
+    aosp_vin8953-eng

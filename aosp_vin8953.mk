@@ -19,8 +19,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelOS stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit from vin8953 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -28,7 +29,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := vsmart
 PRODUCT_DEVICE := vin8953
 PRODUCT_MANUFACTURER := vsmart
-PRODUCT_NAME := lineage_vin8953
+PRODUCT_NAME := aosp_vin8953
 PRODUCT_MODEL := Joy 3
 
 # userdebug
