@@ -71,9 +71,6 @@ function blob_fixup() {
     vendor/lib/libremosaic_daemon.so)
         "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v30.so" "${2}"
         ;;
-    vendor/lib64/hw/fingerprint.vin8953.so)
-        "${PATCHELF}" --set-soname "fingerprint.vin8953.so" "${2}"
-        ;;
     esac
 }
 
