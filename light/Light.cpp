@@ -27,17 +27,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#define LEDS            "/sys/class/leds/"
-
-#define LCD_LED         LEDS "lcd-backlight/"
-#define RED_LED         LEDS "red/"
-#define GREEN_LED       LEDS "green/"
-#define BLUE_LED        LEDS "blue/"
-
+#define LCD_LED         "/sys/class/leds/lcd-backlight/"
 #define BRIGHTNESS      "brightness"
-#define BREATH          "breath"
-#define DELAY_OFF       "delay_off"
-#define DELAY_ON        "delay_on"
 
 /*
  * Write value to path and close file.
@@ -57,74 +48,9 @@ static void set(std::string path, int value) {
     set(path, std::to_string(value));
 }
 
-static void set_blink(uint32_t redBrightness, uint32_t greenBrightness, uint32_t blueBrightness, uint32_t flashOnMs, uint32_t flashOffMs) {
-    /*  Special case for flashOnMs == flashOffMs == 1000: use breathing effect */
-    if (flashOnMs == 1000 && flashOffMs == 1000) {
-        set(RED_LED BREATH, redBrightness > 128 ? 1 : 0);
-        set(GREEN_LED BREATH, greenBrightness > 128 ? 1 : 0);
-        set(BLUE_LED BREATH, blueBrightness > 128 ? 1 : 0);
-    } else {
-        if (redBrightness > 128) {
-            set(RED_LED DELAY_ON, flashOnMs);
-            set(RED_LED DELAY_OFF, flashOffMs);
-        }
-        else {
-            set(RED_LED BRIGHTNESS, 0);
-        }
-
-        if (greenBrightness > 128) {
-            set(GREEN_LED DELAY_ON, flashOnMs);
-            set(GREEN_LED DELAY_OFF, flashOffMs);
-        }
-        else {
-            set(GREEN_LED BRIGHTNESS, 0);
-        }
-
-        if (blueBrightness > 128 ) {
-            set(BLUE_LED DELAY_ON, flashOnMs);
-            set(BLUE_LED DELAY_OFF, flashOffMs);
-        }
-        else {
-            set(BLUE_LED BRIGHTNESS, 0);
-        }
-    }
-}
-
 static void handleBacklight(const LightState& state) {
     uint32_t brightness = state.color & 0xFF;
     set(LCD_LED BRIGHTNESS, brightness);
-}
-
-static void handleNotification(const LightState& state) {
-    uint32_t redBrightness, greenBrightness, blueBrightness, brightness;
-    
-    /*
-     * Extract brightness from AARRGGBB.
-     */
-    redBrightness = (state.color >> 16) & 0xFF;
-    greenBrightness = (state.color >> 8) & 0xFF;
-    blueBrightness = state.color & 0xFF;
-
-    brightness = (state.color >> 24) & 0xFF;
-
-    /*
-     * Scale RGB brightness if the Alpha brightness is not 0xFF.
-     */
-    if (brightness != 0xFF) {
-        redBrightness = (redBrightness * brightness) / 0xFF;
-        greenBrightness = (greenBrightness * brightness) / 0xFF;
-        blueBrightness = (blueBrightness * brightness) / 0xFF;
-    }
-
-    if (state.flashMode == Flash::NONE) {
-        set(RED_LED BRIGHTNESS, redBrightness);
-        set(GREEN_LED BRIGHTNESS, greenBrightness);
-        set(BLUE_LED BRIGHTNESS, blueBrightness);
-    }
-    else if (state.flashMode == Flash::TIMED) {
-        /* Enable blinking and breathing.*/
-        set_blink(redBrightness, greenBrightness, blueBrightness, state.flashOnMs, state.flashOffMs);
-    }
 }
 
 /* Since higher level code seems to never query which lights
@@ -139,9 +65,6 @@ static inline bool isLit(const LightState& state) {
 
 /* Keep sorted in the order of importance. */
 static std::vector<LightBackend> backends = {
-    { Type::ATTENTION, handleNotification },
-    { Type::NOTIFICATIONS, handleNotification },
-    { Type::BATTERY, handleNotification },
     { Type::BUTTONS, handleIgnore },
     { Type::BACKLIGHT, handleBacklight }
 };
