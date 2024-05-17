@@ -37,6 +37,15 @@
     <!-- Boolean indicating whether or not wifi should turn off when emergency call is made -->
     <bool translatable="false" name="config_wifi_turn_off_during_emergency_call">true</bool>
 
+    <!-- True if the firmware supports connected MAC randomization -->
+    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
+
+    <!-- True if the firmware supports p2p MAC randomization -->
+    <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
+
+    <!-- Indicates that AP mode MAC randomization is supported on this device -->
+    <bool name="config_wifi_ap_mac_randomization_supported">true</bool>
+
      <!-- Integer parameters of the wifi to cellular handover feature wifi should not stick to bad networks -->
      <integer translatable="false" name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-100</integer>
      <integer translatable="false" name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-100</integer>
