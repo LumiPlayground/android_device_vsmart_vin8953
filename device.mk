@@ -17,6 +17,9 @@
 # Vendor blobs
 $(call inherit-product, vendor/vsmart/casuarina/casuarina-vendor.mk)
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 560dpi
