@@ -7,6 +7,15 @@ vendor/lib64/hw/fpsensor_fingerprint.default.so|e5b93b12282dbd2a61bef9c497a95400
 vendor/lib64/libfp_ext_svc2.so|43bbefc7ecfc09a9fd826d4ad544984b4a6b4c2f
 vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so|6fb5ccb86a543a592ee4b8bd1ca1096d4ecad818
 
+# GPU Firmware - from V430A_OPN_U_B15_211112
+vendor/firmware/a506_zap.b00|21d74ee137e4096c2ffcd6f2545b5b2f8f384efa
+vendor/firmware/a506_zap.b01|a411ea3349bd2e907d6598183d3044e565f28bf6
+vendor/firmware/a506_zap.b02|3e301fa5905acd05f15836959595791c1241a017
+vendor/firmware/a506_zap.elf|5532e3511cea20c47ee816ac9a74cf69881de0ee
+vendor/firmware/a506_zap.mdt|8e49bac7a52230ec70ab640f26ac57f7a8596b39
+vendor/firmware/a530_pfp.fw|35b72dce880191ff087af2524205afce40ea8c97
+vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
+
 # QSEECOM firmware - from V430A_OPN_U_B15_211112
 vendor/firmware/fngap64.b00|eebab49acb965cdf0a6f1e40d70bb931abcd4439
 vendor/firmware/fngap64.b01|943aa39e2419d4e8fc55c06cb344e1a9957aec4a
@@ -813,14 +822,7 @@ vendor/etc/wifi/aoa_cldb_swl14.bin
 vendor/etc/xtra_root_cert.pem
 
 # firmware
-vendor/firmware/a506_zap.b00
-vendor/firmware/a506_zap.b01
-vendor/firmware/a506_zap.b02
-vendor/firmware/a506_zap.elf
-vendor/firmware/a506_zap.mdt
 vendor/firmware/a530_gpmu.fw2
-vendor/firmware/a530_pfp.fw
-vendor/firmware/a530_pm4.fw
 vendor/firmware/a530v1_pfp.fw
 vendor/firmware/a530v1_pm4.fw
 vendor/firmware/a530v2_seq.fw2
