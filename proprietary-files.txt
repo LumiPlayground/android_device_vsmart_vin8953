@@ -827,14 +827,6 @@ vendor/firmware/cpp_firmware_v1_5_1.fw
 vendor/firmware/cpp_firmware_v1_5_2.fw
 vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
-vendor/firmware/fingerprint.b00
-vendor/firmware/fingerprint.b01
-vendor/firmware/fingerprint.b02
-vendor/firmware/fingerprint.b03
-vendor/firmware/fingerprint.b04
-vendor/firmware/fingerprint.b05
-vendor/firmware/fingerprint.b06
-vendor/firmware/fingerprint.mdt
 vendor/firmware/tas2557_uCDSP.bin
 vendor/firmware/tas2557evm_aacspk_a.ftcfg
 vendor/firmware/venus.b00
@@ -1549,7 +1541,6 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.FP3.so
 vendor/lib64/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/keystore.msm8953.so
 vendor/lib64/hw/sound_trigger.primary.msm8953.so
