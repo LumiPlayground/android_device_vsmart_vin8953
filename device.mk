@@ -297,7 +297,6 @@ PRODUCT_PACKAGES += \
 
 #INIT
 PRODUCT_PACKAGES += \
-    elan_device.rc \
     fstab.qcom \
     init.class_late.sh \
     init.class_main.sh \

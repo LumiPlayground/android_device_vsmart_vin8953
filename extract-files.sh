@@ -59,12 +59,6 @@ fi
 function blob_fixup() {
     case "${1}" in
 
-    # Change soname for fingerprint.default.so.
-    vendor/lib64/hw/fingerprint.FP3.so)
-        [ "$2" = "" ] && return 0
-        "${PATCHELF}" --set-soname "fingerprint.FP3.so" "${2}"
-        ;;
-
             return 1
             ;;
     esac

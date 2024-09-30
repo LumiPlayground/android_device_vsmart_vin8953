@@ -1,5 +1,2 @@
-#[SM42][fingerprint][kent][17110101][begin]add writing property  permission
-vendor_public_prop(fps_vendor_prop)
-
 #vendor-info.camera
 vendor_public_prop(vendor_info_camera_prop)
