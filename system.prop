@@ -14,13 +14,9 @@ audio.offload.video=true
 #set AudioFlinger client heap size
 ro.af.client_heap_size_kbyte=7168
 
-
 # Bluetooth
-#system prop for Bluetooth
-#ro.bluetooth.library_name=libbluetooth_qti.so # Disable this as we do not use QTI BT stack in AOSP.
 bluetooth.hfp.client=1
-bluetooth.device.default_name=Fairphone 3
-
+bluetooth.device.default_name=Joy 3
 
 # Camera
 #properties for limiting preview size in camera
@@ -33,15 +29,12 @@ vendor.camera.lowpower.record.enable=1
 #expose aux camera for below packages
 vendor.camera.aux.packagelist=com.android.fp3camera
 
-
 # System property for cabl
 ro.qualcomm.cabl=2
 ro.vendor.display.cabl=2
 
-
 # system props for the cne module
 persist.vendor.cne.feature=1
-
 
 # Data
 persist.data.netmgrd.qos.enable=true
@@ -49,50 +42,11 @@ persist.vendor.data.mode=concurrent
 # system props for the data modules
 ro.vendor.use_data_netmgrd=true
 
-
-# Display
-ro.hdmi.enable=false
 #Disable Skip Validate
 sdm.debug.disable_skip_validate=1
-#Property to enable display default color mode
-vendor.display.enable_default_color_mode=1
 
-# Display Properties as per treble compliance
-vendor.gralloc.enable_fb_ubwc=1
-vendor.display.disable_skip_validate=1
-
-
-# EMMC
-#set device emmc size
-ro.emmc_size=16GB
-
-
-# FBE
-#for FBE
-ro.crypto.allow_encrypt_override=true
-ro.crypto.volume.filenames_mode=aes-256-cts
-
-
-# Fingerprint
-#property to enable fingerprint
-persist.qfp=false
-
-
-# Graphics
-dalvik.vm.heapsize=36m
-debug.egl.hw=0
-debug.enable.sglscale=1
-debug.gralloc.enable_fb_ubwc=1
-debug.mdpcomp.logs=0
-debug.sf.disable_backpressure=1
-#debug.sf.enable_hwc_vds=0 # Android default: 0 (false)
-debug.sf.hw=0
-debug.sf.latch_unsignaled=1
-debug.sf.recomputecrop=0
-dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 persist.hwc.mdpcomp.enable=true
-
 
 #HWUI properties
 ro.hwui.drop_shadow_cache_size=6
@@ -106,7 +60,6 @@ ro.hwui.text_small_cache_height=1024
 ro.hwui.text_small_cache_width=1024
 ro.hwui.texture_cache_flushrate=0.4
 ro.hwui.texture_cache_size=72
-
 
 # Media
 av.debug.disable.pers.cache=1
@@ -122,16 +75,6 @@ media.msm8956hw=0
 
 #codecs:(PARSER_)AAC AC3 ASF FLV 3G2 MP2PS MP2TS QCP AIFF
 vendor.mm.enable.qcom_parser=301715
-
-
-# Others
-#selects Console configuration to enable
-persist.console.silent.config=1
-# system property to accelerate Progressive Download using STA
-persist.mm.sta.enable=0
-#set cutoff voltage to 3400mV
-ro.cutoff_voltage_mv=3400
-
 
 # Radio/ RIL properties
 DEVICE_PROVISIONED=1
@@ -155,16 +98,13 @@ ro.telephony.default_network=20,20
 #Simulate sdcard on /data/media
 persist.fuse_sdcard=true
 
-
 # Telephony
 # System prop to turn on CdmaLTEPhone always
 telephony.lteOnCdmaDevice=1
 
-
 # Time
 #system props for time-services
 persist.timed.enable=true
-
 
 # Video
 # Additional buffers shared between Camera and Video
