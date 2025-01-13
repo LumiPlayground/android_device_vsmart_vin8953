@@ -453,6 +453,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     sys.vendor.shutdown.waittime=500
 
+# Partitions
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint
+
 # Perf
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
