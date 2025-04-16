@@ -65,6 +65,10 @@ function blob_fixup() {
         sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
         ;;
 
+    # Change soname for fingerprint.default.so.
+    vendor/lib64/hw/fingerprint.msm8953.so)
+        "${PATCHELF}" --set-soname "fingerprint.msm8953.so" "${2}"
+        ;;
     # Remove libhwbinder/libhidltransport dependency
     vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so)
         "${PATCHELF}" --remove-needed "libhwbinder.so" "${2}"

@@ -1,9 +1,7 @@
 # All unpinned blobs are extracted from FP3-REL-6.A.030.0-gms-d57debf7-user
 
 # Fingerprint - from V430A_OPN_U_B15_211112
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service|79ada0e95e94ff454e75bc7f3f961a178435686a
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc|8bd504b3540f9d697e9c9fb52fca273d7ac1088e
-vendor/lib64/hw/fpsensor_fingerprint.default.so|e5b93b12282dbd2a61bef9c497a95400d7b4342b
+vendor/lib64/hw/fpsensor_fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8953.so|3a31c3428638ed1fb8f66aba35bbb9a0
 vendor/lib64/libfp_ext_svc2.so|43bbefc7ecfc09a9fd826d4ad544984b4a6b4c2f
 vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so|6fb5ccb86a543a592ee4b8bd1ca1096d4ecad818
 
