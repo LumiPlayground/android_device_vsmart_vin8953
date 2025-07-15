@@ -321,7 +321,6 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     init.time_daemon.rc \
-    qca6234-service.sh \
     ueventd.qcom.rc \
     vold.fstab
 
