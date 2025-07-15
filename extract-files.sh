@@ -8,10 +8,10 @@
 set -e
 
 # Required!
-export DEVICE=FP3
-export VENDOR=fairphone
+export DEVICE=casuarina
+export VENDOR=vsmart
 
-export DEVICE_BRINGUP_YEAR=2020
+export DEVICE_BRINGUP_YEAR=2025
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

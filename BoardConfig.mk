@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/fairphone/FP3
+DEVICE_PATH := device/vsmart/casuarina
 
 
 # Switch to dedicated msm8953 HAL
@@ -47,9 +47,6 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 TARGET_CPU_CORTEX_A53 := true
 
-
-# Assertions
-TARGET_OTA_ASSERT_DEVICE := FP3
 
 
 # Audio
@@ -107,16 +104,13 @@ DTS_CODEC_M_ := false
 MM_AUDIO_ENABLED_SAFX := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
-
 # Bluetooth
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
-
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := FP3
+TARGET_BOOTLOADER_BOARD_NAME := MSM8953
 TARGET_NO_BOOTLOADER := false
-
 
 # Broken Flags
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -128,7 +122,7 @@ USE_CAMERA_STUB := true
 
 
 # Display
-TARGET_SCREEN_DENSITY := 420
+TARGET_SCREEN_DENSITY := 320
 
 
 # DRM
@@ -206,9 +200,9 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
     MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := lineageos_FP3_defconfig
+TARGET_KERNEL_CONFIG := lineageos_casuarina_defconfig
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/fairphone/sdm632
+TARGET_KERNEL_SOURCE := kernel/vsmart/casuarina
 TARGET_KERNEL_VERSION := 4.9
 TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_KERNEL_CLANG_VERSION := r416183b
@@ -293,4 +287,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/fairphone/FP3/BoardConfigVendor.mk
+-include vendor/vsmart/casuarina/BoardConfigVendor.mk

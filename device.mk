@@ -15,7 +15,7 @@
 #
 
 # Vendor blobs
-$(call inherit-product, vendor/fairphone/FP3/FP3-vendor.mk)
+$(call inherit-product, vendor/vsmart/casuarina/casuarina-vendor.mk)
 
 # System properties
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
@@ -184,8 +184,8 @@ PRODUCT_COPY_FILES += \
 
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2160
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1600
+TARGET_SCREEN_WIDTH := 720
 
 
 # Camera
