@@ -145,6 +145,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     camera.device@1.0-impl \
     camera.device@3.2-impl:32 \
+    libgui_vendor:32 \
     libxml2 \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0.vendor
@@ -628,11 +629,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
-
-# Enable vndk-sp Libraries
-PRODUCT_PACKAGES += \
-    libgui_vendor:32 \
-    vndk_package
 
 # Disable Vulkan feature level 1
 TARGET_NOT_SUPPORT_VULKAN_FEATURE_LEVEL_1 := true
