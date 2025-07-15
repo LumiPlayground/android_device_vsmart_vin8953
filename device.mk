@@ -17,26 +17,10 @@
 # Vendor blobs
 $(call inherit-product, vendor/vsmart/casuarina/casuarina-vendor.mk)
 
-# System properties
-TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
-
-
-# Set system properties identifying the chipset
-PRODUCT_VENDOR_PROPERTIES += ro.soc.manufacturer=QTI
-PRODUCT_VENDOR_PROPERTIES += ro.soc.model=SDM450
-
-
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
-
-
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 560dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
-
 
 # A/B Configs
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -44,7 +28,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
-
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
@@ -65,11 +48,9 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl \
     update_engine_client
 
-
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -91,7 +72,6 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libvolumelistener \
     tinymix
-
 
 AUDIO_HAL_PATH := hardware/qcom-caf/msm8953/audio
 
@@ -137,7 +117,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_tashalite.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tashalite.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
 
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -182,11 +161,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1600
 TARGET_SCREEN_WIDTH := 720
-
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -217,10 +194,7 @@ PRODUCT_PACKAGES += \
     disable_configstore
 
 # Dalvik
-PRODUCT_VENDOR_PROPERTIES += \
-           vendor.vidc.disable.split.mode=1
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
-
 
 # Display
 PRODUCT_PACKAGES += \
@@ -258,7 +232,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += ro.hardware.vulkan=adreno
 PRODUCT_VENDOR_PROPERTIES += ro.hardware.egl=adreno
 
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-V1-ndk.vendor \
@@ -267,25 +240,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     drm.service.enabled=true
 
-
 # Encryption
 PRODUCT_VENDOR_PROPERTIES += ro.crypto.allow_encrypt_override=true
 PRODUCT_VENDOR_PROPERTIES += ro.crypto.volume.filenames_mode=aes-256-cts
-
-# Keystore
-PRODUCT_VENDOR_PROPERTIES += ro.hardware.keystore_desede=true
-
 
 # FBE support
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.qti.qseecomd.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.qseecomd.sh
 
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1 \
     android.hardware.biometrics.fingerprint@2.1-service
-
 
 # Framework Detect
 PRODUCT_PACKAGES += \
@@ -299,10 +265,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_ODM_PROPERTIES += \
     ro.vendor.qti.va_odm.support=1
 
-
 # FRP
 PRODUCT_VENDOR_PROPERTIES += ro.frp.pst=/dev/block/bootdevice/by-name/config
-
 
 # Gatekeeper and Keymaster for vendor
 PRODUCT_PACKAGES += \
@@ -311,6 +275,8 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0.vendor \
     android.hardware.keymaster@4.1.vendor
 
+# Keystore
+PRODUCT_VENDOR_PROPERTIES += ro.hardware.keystore_desede=true
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -332,7 +298,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.backup.ntpServer=0.pool.ntp.org
 
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
@@ -344,19 +309,16 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl:64 \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
-
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml
-
 
 #INIT
 PRODUCT_PACKAGES += \
@@ -393,7 +355,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     init.qcom.test.rc
 
-
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -401,13 +362,11 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
-
 # IPV4
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.data.profile_update=true
 
 PRODUCT_VENDOR_PROPERTIES += ro.telephony.iwlan_operation_mode=legacy
-
 
 # IRQ
 PRODUCT_COPY_FILES += \
@@ -415,11 +374,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance_little_big.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance_little_big.conf \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
-
 # LED packages
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.msm8953
-
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -459,12 +416,12 @@ PRODUCT_COPY_FILES += \
 
 # Media / StagefrightCodec 2.0
 PRODUCT_VENDOR_PROPERTIES += debug.stagefright.omx_default_rank=0
+PRODUCT_VENDOR_PROPERTIES += vendor.vidc.disable.split.mode=1
 
 # Disable media transcoding
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.fuse.transcode_user_control=true \
     persist.sys.fuse.transcode_enabled=false
-
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -480,26 +437,26 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libstagefrighthw
 
-
 # OEM Unlock reporting
 PRODUCT_VENDOR_PROPERTIES += \
     ro.oem_unlock_supported=1
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
 
 # Netd
 PRODUCT_PACKAGES += \
     libnetd_resolv
 
-
 # Netd for vendor
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
 
-
 # Network
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
-
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -517,19 +474,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.nfc_nci=nqx.default
 
-
 # Others
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.qcomsysd.enabled=1 \
     ro.vendor.extension_library=libqti-perfd-client.so \
     sys.vendor.shutdown.waittime=500
 
-
 # Perf
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     $(LOCAL_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf
-
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -579,7 +533,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
@@ -587,17 +540,14 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2 \
     vendor.qti.hardware.perf@2.2.vendor
 
-
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson
-
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -632,12 +582,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.procedure_bytes=SKIP
 
-
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
-
 
 # Secure Element
 PRODUCT_PACKAGES += \
@@ -645,7 +593,6 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.1.vendor \
     android.hardware.secure_element@1.2.vendor
-
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -658,10 +605,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
-
 # Service Tracker
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
+
+# SoC
+PRODUCT_VENDOR_PROPERTIES += ro.soc.manufacturer=QTI
+PRODUCT_VENDOR_PROPERTIES += ro.soc.model=SDM450
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
 
 # System helper
 PRODUCT_PACKAGES += \
@@ -705,7 +659,6 @@ PRODUCT_PACKAGES += \
 # Disable Vulkan feature level 1
 TARGET_NOT_SUPPORT_VULKAN_FEATURE_LEVEL_1 := true
 
-
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
@@ -727,7 +680,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/WCNSS_wlan_dictionary.dat:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_wlan_dictionary.dat
-
 
 # Enable zygote critical window.
 PRODUCT_VENDOR_OVERRIDES += \

@@ -16,10 +16,8 @@
 
 DEVICE_PATH := device/vsmart/casuarina
 
-
 # Switch to dedicated msm8953 HAL
 TARGET_ENFORCES_QSSI := true
-
 
 # A/B updater
 AB_OTA_UPDATER := true
@@ -29,7 +27,6 @@ AB_OTA_PARTITIONS += \
     system \
     vbmeta \
     vendor
-
 
 # Architecture
 TARGET_ARCH := arm64
@@ -46,8 +43,6 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 TARGET_CPU_CORTEX_A53 := true
-
-
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -116,18 +111,14 @@ TARGET_NO_BOOTLOADER := false
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
-
 # Camera
 USE_CAMERA_STUB := true
-
 
 # Display
 TARGET_SCREEN_DENSITY := 320
 
-
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
-
 
 # Filesystem and Partitions
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -149,11 +140,9 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_NO_RECOVERY := true
 
-
 # Filesystem config
 TARGET_FS_CONFIG_GEN += \
     $(DEVICE_PATH)/configs/config.fs
-
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default # from gps/gps_vendor_board.mk
@@ -174,7 +163,6 @@ TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 TARGET_USES_MEDIA_EXTENSIONS := true
 
-
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/framework_compatibility_matrix.xml \
@@ -183,7 +171,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
-
 
 # Kernel
 BOARD_KERNEL_BASE        := 0x80000000
@@ -213,63 +200,46 @@ TARGET_USES_UNCOMPRESSED_KERNEL := false
 BOARD_BOOT_HEADER_VERSION := 1
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
-
 
 # Mount point
 TARGET_MOUNT_POINTS_SYMLINKS := false
 
-
-# Platform - UM_3_18_FAMILY
+# Platform
+BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := msm8953
-
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
-
-# QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
+# Properties
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 
-
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-
-# Enable sensor multi HAL
+# Sensors
 USE_SENSOR_MULTI_HAL := true
-
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
-
-
-# Treble
+# Verified Boot
 BOARD_AVB_ENABLE := true
-# Enable chain partition for system, to facilitate system-only OTA in Treble.
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_SYSTEM_ROLLBACK_INDEX := 0
 BOARD_AVB_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
-# Disable verity and descriptor checking
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
-
-
 # Vendor Security Patch Level
 VENDOR_SECURITY_PATCH := "2024-08-05"
-
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
